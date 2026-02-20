@@ -1,15 +1,10 @@
-import java.util.Scanner;
+public class UC4 {
 
-public class Uc4 {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        String input = "radar";
 
-        System.out.print("Enter a text: ");
-        String text = input.nextLine();
-
-        // Convert user input to char array
-        char[] chars = text.toCharArray();
+        char[] chars = input.toCharArray();
 
         int start = 0;
         int end = chars.length - 1;
@@ -17,18 +12,17 @@ public class Uc4 {
         boolean isPalindrome = true;
 
         while (start < end) {
+
             if (chars[start] != chars[end]) {
                 isPalindrome = false;
                 break;
             }
+
             start++;
             end--;
         }
 
-        if (isPalindrome) {
-            System.out.println("It is a palindrome");
-        } else {
-            System.out.println("It is not a palindrome");
-        }
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
     }
 }
